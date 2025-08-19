@@ -104,25 +104,33 @@ python app.py
 ## 📁 Project Structure
 
 ai-research-assistant/
-├── app.py # Main Flask application
-├── .env # Environment variables (API keys)
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation
-├── static/
-│ ├── css/
-│ │ └── styles.css # Custom styling
-│ └── js/
-│ └── main.js # JavaScript functionality
-├── templates/
-│ ├── base.html # Base template
-│ ├── index.html # Home page
-│ └── research.html # Results page
-└── utils/
-├── init.py # Package initializer
-├── config.py # Configuration settings
-├── agents.py # AI research agents
-├── search.py # Tavily search integration
-└── report_generator.py # PDF/Markdown generation
+app.py # Main Flask application
+
+.env # Environment variables (API keys)
+
+requirements.txt # Python dependencies
+
+README.md # Project documentation
+
+static/css/styles.css # Custom styling
+
+static/js/main.js # JavaScript functionality
+
+templates/base.html # Base template
+
+templates/index.html # Home page
+
+templates/research.html # Results page
+
+utils/init.py # Package initializer
+
+utils/config.py # Configuration settings
+
+utils/agents.py # AI research agents
+
+utils/search.py # Tavily search integration
+
+utils/report_generator.py # PDF/Markdown generation
 
 ## 🔧 Architecture
 
@@ -209,7 +217,6 @@ Credible sources with clickable links
 
 1. **Push to GitHub**
 
-
 2. **Deploy on Render**
 - Visit [render.com](https://render.com)
 - Connect your GitHub repository
@@ -258,13 +265,6 @@ include_domains=[
 # Add your preferred domains
 ]
 
-
-### Agent Customization
-
-Modify agent prompts in `utils/agents.py` for different research styles:
-
-
-
 ### Agent Customization
 
 Modify agent prompts in `utils/agents.py` for different research styles:
@@ -274,55 +274,6 @@ input_variables=["query", "search_results"],
 template="""Your custom research prompt here..."""
 )
 
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**🔥 API Keys Not Working**
-
-Check your .env file format
-GROQ_API_KEY=gsk_your_key_without_quotes
-TAVILY_API_KEY=tvly-your_key_without_quotes
-
-
-**🔥 Research Stuck on "Searching"**
-- Check internet connection
-- Verify Tavily API key validity
-- Check Tavily quota limits
-
-**🔥 Report Formatting Issues**
-- Clear browser cache
-- Check browser console for JavaScript errors
-- Ensure all static files are loading
-
-**🔥 Deployment Issues**
-- Verify all environment variables are set
-- Check build logs for missing dependencies
-- Ensure Python version compatibility
-
-### Debug Mode
-
-Enable debug logging:
-In app.py
-app.run(debug=True, host='0.0.0.0', port=5000)
-
-
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-
-
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -341,23 +292,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] **API Access** - RESTful API for developers
 - [ ] **Mobile App** - React Native mobile application
 
-## 📞 Support
-
-- **Documentation**: [Wiki](https://github.com/yourusername/ai-research-assistant/wiki)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/ai-research-assistant/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/ai-research-assistant/discussions)
-
----
-
-<div align="center">
-
-**⭐ Star this repository if you found it helpful!**
-
-[Live Demo](your-deployment-url) 
-• [Report Bug](https://github.com/yourusername/ai-research-assistant/issues) 
-• [Request Feature](https://github.com/yourusername/ai-research-assistant/issues)
-
-</div>
+## Thanks
 
 
 
