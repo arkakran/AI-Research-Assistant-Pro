@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Research Results - AI Research Assistant Pro{% endblock %}
+
+{% block content %}
+<div class="results-section">
+    <div class="container">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h1 class="results-title">
+                <i class="fas fa-chart-bar me-2"></i>
+                Research Report
+            </h1>
+            <p class="results-subtitle">Comprehensive analysis powered by AI agents</p>
+            <div class="query-display">
+                <strong>Query:</strong> {{ query }}
+            </div>
+        </div>
+
+        <!-- Report Content -->
+        <div class="report-container">
+            <div class="report-content">
+                {{ process_report_content(report)|safe }}
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="download-section">
+            <h3 class="download-title">
+                <i class="fas fa-download me-2"></i>
+                Export Your Research Report
+            </h3>
+            <p class="download-desc">Download your comprehensive research report in multiple professional formats</p>
+            
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <a href="{{ url_for('download_report', format='markdown', research_id=research_id) }}" 
+                       class="btn btn-outline-primary btn-lg w-100">
+                        <i class="fab fa-markdown me-2"></i>
+                        Download Markdown
+                        <small class="d-block">Perfect for documentation</small>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{{ url_for('download_report', format='pdf', research_id=research_id) }}" 
+                       class="btn btn-outline-danger btn-lg w-100">
+                        <i class="fas fa-file-pdf me-2"></i>
+                        Download PDF
+                        <small class="d-block">Professional presentations</small>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{{ url_for('download_report', format='json', research_id=research_id) }}" 
+                       class="btn btn-outline-success btn-lg w-100">
+                        <i class="fas fa-code me-2"></i>
+                        Download JSON
+                        <small class="d-block">Raw data for developers</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Research -->
+        <div class="text-center mt-5">
+            <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-plus me-2"></i>
+                Start New Research
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
