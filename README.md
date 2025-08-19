@@ -3,7 +3,6 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Flask](https://img.shields.io/badge/Flask-2.3.0+-green.svg)](https://flask.palletsprojects.com/)
 [![LangChain](https://img.shields.io/badge/LangChain-0.2.0+-purple.svg)](https://langchain.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > **Professional multi-agent research system that generates comprehensive reports using LLaMA-3.3-70B and Tavily AI Search**
 
